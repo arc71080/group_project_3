@@ -1,0 +1,56 @@
+Field Number,Field Name,Description,Variable,Definition
+1,lat,Latitude of school,,
+2,long,Longitude of school,,
+3,state,State where school is located,,
+4,county,County name where school is located,,
+5,city,City where school is located,,
+6,district_name,Name of school district,,
+7,school_name,Name of school,,
+8,date,Date of shooting,,
+9,day_of_week,Day of week of shooting,,
+10,time,Approximate time of shooting,,
+11,school_type,Type of school (public or private),,
+12,enrollment,Enrollment at school at time of shooting,,
+13,killed,Number killed in shooting (excludes shooter),,
+14,injured,Number injured in shooting (excludes shooter),,
+15,casualties,Number killed and injured in shooting (excludes shooter),,
+16,shooting_type,Type of shooting,accidental,Gun discharged accidentally
+,,,hostage suicide,Shooter took hostages before attempting suicide
+,,,indiscriminate,Shooter fired weapon purposefully but without intended victim(s)
+,,,public suicide,Shooter attempted suicide in public space
+,,,targeted,Shooter fired weapon purposefully with intended victim(s)
+,,,unclear,Type of shooting unknown
+17,age_shooter1,Age of first shooter,,
+18,gender_shooter1,Gender of first shooter,a,Asian
+19,race_ethnicity_shooter1,Race or ethnicity of first shooter,ai,American Indian
+,,,b,Black
+,,,h,Hispanic
+,,,w,White
+20,shooter_relationship1,First shooter's relationship to school,,
+21,shooter_deceased1,Flag indicating whether first shooter died in shooting,1,Shooter died in shooting
+,,,0,Shooter did not die or shooter status unknown
+22,deceased_notes1,"If first shooter deceased, how first shooter died",,
+23,age_shooter2,Age of second shooter,,
+24,gender_shooter2,Gender of second shooter,a,Asian
+25,race_ethnicity_shooter2,Race or ethnicity of second shooter,ai,American Indian
+,,,b,Black
+,,,h,Hispanic
+,,,w,White
+,,,,
+26,shooter_relationship2,Second shooter's relationship to school,,
+27,shooter_deceased2,Flag indicating whether second shooter died in shooting,1,Shooter died in shooting
+,,,0,Shooter did not die or shooter status unknown
+28,deceased_notes2,"If second shooter deceased, how first shooter died",,
+29,white,Enrollment of white students at time of shooting,,
+30,black,Enrollment of black students at time of shooting,,
+31,hispanic,Enrollment of Hispanic students at time of shooting,,
+32,asian,Enrollment of Asian students at time of shooting,,
+33,american_indian_alaska_native,Enrollment of American Indian and Alaskan native students at time of shooting,,
+34,hawaiian_native_pacific_islander,Enrollment of Hawaiian native and Pacific islander students at time of shooting (unavailable prior to 2009),,
+35,two_or_more,Enrollment of students of two or more races at time of shooting (unavailable prior to 2009),,
+36,resource_officer,Flag indicating presence of school resource officer or security guard on school grounds at time of shooting,1,Resource officer of security guard present at school at time of shooting
+,,,0,Resource officer of security guard not present at school at time of shooting or presence unknown
+37,weapon,Weapon(s) used in shooting,,
+38,weapon_source,Where shooter acquired weapon(s) used in shooting,,
+39,staffing,Full-time equivalent teachers at school at time of shooting,,
+40,lunch,Number of students at school eligible to receive a free or reduced-price lunch,,
