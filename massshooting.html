@@ -1,34 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Gun Violence in America</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- D3 -->
-        <script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://cdn.canvasjs.com/ga/canvasjs.min.js"></script>
-
+       
         <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
+        crossorigin="" />
 
-        <!-- Leaflet JavaScript code -->
+        <!-- Our CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- The div that holds our map -->
+        <div id="map"></div>
+        <div id="chartContainer"></div>
+        <!-- Leaflet JS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-
-        <!-- The div that holds our map -->
-        <div id="map-id"></div>
-        <div id="chartContainer"></div>
-
-        <!-- Our JavaScript file -->
+        <!-- D3 JavaScript -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.canvasjs.com/ga/canvasjs.min.js"></script>
+        <!-- Our JavaScript -->
         <script type="text/javascript" src="geoJson.js"></script>
-        <script src=""></script>
-
-        // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json").then(createMarkers);
+       =
+</html>
 
 
         <style>
@@ -188,4 +188,334 @@ d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json").then(cr
             <p><a href="https://www.britannica.com/topic/mass-shooting">Britannica</a></li></p>
           </footer>
     </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gun Violence in America</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            /* Style the header */
+            header {
+              background-color: #c72828;
+              padding: 30px;
+              text-align: center;
+              font-size: 35px;
+              color: white;
+            }
+            
+            /* Create two columns/boxes that floats next to each other */
+            nav {
+              float: left;
+              width: 30%;
+              height: 1350px; /* only for demonstration, should be removed */
+              background: #ccc;
+              padding: 20px;
+            }
+            
+            /* Style the list inside the menu */
+            nav ul {
+              list-style-type: none;
+              padding: 0;
+            }
+            
+            article {
+              float: left;
+              padding: 20px;
+              width: 70%;
+              background-color: #f1f1f1;
+              height: 1350px; /* only for demonstration, should be removed */
+            }
+            
+            /* Clear floats after the columns */
+            section::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Style the footer */
+            footer {
+              background-color: #ababab;
+              padding: 10px;
+              text-align: center;
+              color: white;
+            }
+            
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @media (max-width: 600px) {
+              nav, article {
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            div.a{
+                text-indent: 30px;
+            }
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1>Facts</h1>
+          </header>
+          
+          <section>
+            <nav>
+              <ul>
+                <li><a href="./index.html#">Home</a></li>
+                <li><a href="./gunviolence.html#">Gun Violence</a></li>
+                <li><a href="./massshooting.html#">Mass Shooting</a>
+                    <ul>
+                        <div class="a">
+                            <li><a href="./massshooting.html#">Mass Shooting Map</a></li>
+                        </div>
+                    </ul>
+                    <br>
+                </li>
+                <li><a href="./schoolshooting.html#">School Shooting</a></li>
+              </ul>
+            </nav>
+            
+            <article>
+                <h1>Mass Shooting</h1>
+                <p>
+                    There is no widely accepted definition of a mass shooting; some count based on a minimum number of dead victims, or a minimum number of overall victims.
+                    <br> 
+                    <br> However, the Federal Bureau of Investigation has defined an active shooter incident as one or more individuals “actively engaged in killing or attempting to kill people in a populated area. Implicit in this definition is the shooter’s use of a firearm.” The FBI has not set a minimum number of casualties to qualify as a mass shooting, but U.S. statute (the Investigative Assistance for Violent Crimes Act of 2012) specifies that a “mass killing” is defined as “3 or more killings in a single incident.” For the purposes of this infographic, both sets of criteria are applied to the term "mass shooting," with the distinction that the shooter or shooters are not included in any fatality statistics. The term "spree" is used
+                    for shootings involving multiple locations.
+                    <br>
+                <h1>Top 12 Worst Mass Shootings (by date)</h1>
+                    <ol>
+                        <li>University of Texas clock tower
+                            <br>August 1, 1966 - Austin, Texas
+                            <br>14 killed, 30+ injured</li>
+                            <br>
+                        <li>San Ysidro McDonald's
+                            <br>July 18, 1984 - San Diego, California
+                            <br>21 killed, 19 injured</li>
+                            <br>
+                        <li>Ludy's Cafeteria
+                            <br>October 16, 1991 - Killeen, Texas
+                            <br>2 killed, 27 injured</li>
+                            <br>
+                        <li>Columbine High School
+                            <br>April 20, 1999 - Littleton, Colorado
+                            <br>13 killed, 21 injured</li>
+                            <br>
+                        <li>Virginia Tech
+                            <br>April 16, 2007 - Blacksburg, Virigina
+                            <br>32 killed, 23 injured</li>
+                            <br>
+                        <li>Sandy Hook Elementary School
+                            <br>December 14, 2012 - Newtown, Connecticut
+                            <br>26 killed, 2 injured</li>
+                            <br>
+                        <li>Pulse Nightclub
+                            <br>June 12, 2016 - Orlando, Florida
+                            <br>49 killed, 50+ injured</li>
+                            <br>
+                        <li>Las Vegas Strip
+                            <br>October 1, 2017 - Las Vegas, Navada 
+                            <br>58 killed, 850+ injured</li>
+                            <br>
+                        <li>Sutherland Springs Church
+                            <br>November 5, 2017 - Springs, Texas
+                            <br>26 killed, 20 injured</li>
+                            <br>
+                        <li>Marjory Stoneman Douglas High School
+                            <br>February 14, 2018 - Parkland, Florida
+                            <br>17 killed, 17 injured</li>
+                            <br>
+                        <li>El Paso Walmart
+                            <br>August 3, 2019 - El Paso Texas
+                            <br>23 killed, 22 injured</li>
+                            <br>
+                        <li>Robb Elementary School
+                            <br>May 2, 2022 - Uvalde, Texas
+                            <br>21 killed, 17 injured</li>
+                    </ol>
+                </p>
+            </article>
+          </section>
+          <footer>
+            <h1>Resouces</h1>
+            <p><a href="https://www.britannica.com/topic/mass-shooting">Britannica</a></li></p>
+          </footer>
+    </body>
+>>>>>>> 3b56904c3710c9dc893d722a9516e5fb21c9ce73
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gun Violence in America</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            /* Style the header */
+            header {
+              background-color: #c72828;
+              padding: 30px;
+              text-align: center;
+              font-size: 35px;
+              color: white;
+            }
+            
+            /* Create two columns/boxes that floats next to each other */
+            nav {
+              float: left;
+              width: 30%;
+              height: 1350px; /* only for demonstration, should be removed */
+              background: #ccc;
+              padding: 20px;
+            }
+            
+            /* Style the list inside the menu */
+            nav ul {
+              list-style-type: none;
+              padding: 0;
+            }
+            
+            article {
+              float: left;
+              padding: 20px;
+              width: 70%;
+              background-color: #f1f1f1;
+              height: 1350px; /* only for demonstration, should be removed */
+            }
+            
+            /* Clear floats after the columns */
+            section::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Style the footer */
+            footer {
+              background-color: #ababab;
+              padding: 10px;
+              text-align: center;
+              color: white;
+            }
+            
+            /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+            @media (max-width: 600px) {
+              nav, article {
+                width: 100%;
+                height: auto;
+              }
+            }
+
+            div.a{
+                text-indent: 30px;
+            }
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1>Facts</h1>
+          </header>
+          
+          <section>
+            <nav>
+              <ul>
+                <li><a href="./index.html#">Home</a></li>
+                <li><a href="./gunviolence.html#">Gun Violence</a></li>
+                <li><a href="./massshooting.html#">Mass Shooting</a>
+                    <ul>
+                        <div class="a">
+                            <li><a href="./massshooting.html#">Mass Shooting Map</a></li>
+                        </div>
+                    </ul>
+                    <br>
+                </li>
+                <li><a href="./schoolshooting.html#">School Shooting</a></li>
+              </ul>
+            </nav>
+            
+            <article>
+                <h1>Mass Shooting</h1>
+                <p>
+                    There is no widely accepted definition of a mass shooting; some count based on a minimum number of dead victims, or a minimum number of overall victims.
+                    <br> 
+                    <br> However, the Federal Bureau of Investigation has defined an active shooter incident as one or more individuals “actively engaged in killing or attempting to kill people in a populated area. Implicit in this definition is the shooter’s use of a firearm.” The FBI has not set a minimum number of casualties to qualify as a mass shooting, but U.S. statute (the Investigative Assistance for Violent Crimes Act of 2012) specifies that a “mass killing” is defined as “3 or more killings in a single incident.” For the purposes of this infographic, both sets of criteria are applied to the term "mass shooting," with the distinction that the shooter or shooters are not included in any fatality statistics. The term "spree" is used
+                    for shootings involving multiple locations.
+                    <br>
+                <h1>Top 12 Worst Mass Shootings (by date)</h1>
+                    <ol>
+                        <li>University of Texas clock tower
+                            <br>August 1, 1966 - Austin, Texas
+                            <br>14 killed, 30+ injured</li>
+                            <br>
+                        <li>San Ysidro McDonald's
+                            <br>July 18, 1984 - San Diego, California
+                            <br>21 killed, 19 injured</li>
+                            <br>
+                        <li>Ludy's Cafeteria
+                            <br>October 16, 1991 - Killeen, Texas
+                            <br>2 killed, 27 injured</li>
+                            <br>
+                        <li>Columbine High School
+                            <br>April 20, 1999 - Littleton, Colorado
+                            <br>13 killed, 21 injured</li>
+                            <br>
+                        <li>Virginia Tech
+                            <br>April 16, 2007 - Blacksburg, Virigina
+                            <br>32 killed, 23 injured</li>
+                            <br>
+                        <li>Sandy Hook Elementary School
+                            <br>December 14, 2012 - Newtown, Connecticut
+                            <br>26 killed, 2 injured</li>
+                            <br>
+                        <li>Pulse Nightclub
+                            <br>June 12, 2016 - Orlando, Florida
+                            <br>49 killed, 50+ injured</li>
+                            <br>
+                        <li>Las Vegas Strip
+                            <br>October 1, 2017 - Las Vegas, Navada 
+                            <br>58 killed, 850+ injured</li>
+                            <br>
+                        <li>Sutherland Springs Church
+                            <br>November 5, 2017 - Springs, Texas
+                            <br>26 killed, 20 injured</li>
+                            <br>
+                        <li>Marjory Stoneman Douglas High School
+                            <br>February 14, 2018 - Parkland, Florida
+                            <br>17 killed, 17 injured</li>
+                            <br>
+                        <li>El Paso Walmart
+                            <br>August 3, 2019 - El Paso Texas
+                            <br>23 killed, 22 injured</li>
+                            <br>
+                        <li>Robb Elementary School
+                            <br>May 2, 2022 - Uvalde, Texas
+                            <br>21 killed, 17 injured</li>
+                    </ol>
+                </p>
+            </article>
+          </section>
+          <footer>
+            <h1>Resouces</h1>
+            <p><a href="https://www.britannica.com/topic/mass-shooting">Britannica</a></li></p>
+          </footer>
+    </body>
+>>>>>>> 3b56904c3710c9dc893d722a9516e5fb21c9ce73
 </html>
