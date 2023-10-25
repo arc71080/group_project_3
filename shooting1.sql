@@ -43,7 +43,7 @@ create table shootings (
 	county varchar, 
 	city varchar,
 	district_name varchar, 
-	school_name varchar,
+	school_name varchar primary key,
 	shooting_date date not null,
 	day_of_week varchar not null, 
 	shooting_time time, 
