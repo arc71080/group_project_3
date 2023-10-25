@@ -3,6 +3,7 @@
  DROP TABLE IF EXISTS county_pop;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 create table state_pop (
 	state varchar not null primary key,
 	population decimal (9,1) not null,
@@ -38,6 +39,8 @@ create table county_pop (
 
 =======
 >>>>>>> origin/Jodee
+=======
+>>>>>>> refs/remotes/origin/main
 --Create table and view columns for titles
 create table shootings (
 	lat decimal,
@@ -47,10 +50,14 @@ create table shootings (
 	city varchar,
 	district_name varchar, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	school_name varchar primary key,
 =======
 	school_name varchar,
 >>>>>>> origin/Jodee
+=======
+	school_name varchar,
+>>>>>>> refs/remotes/origin/main
 	shooting_date date not null,
 	day_of_week varchar not null, 
 	shooting_time time, 
@@ -85,6 +92,7 @@ create table shootings (
 	weapon_source varchar,
 	staffing decimal,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	lunch integer,
 	foreign key (state_id) references state(state_pop),
 	foreign key (county) references county(county_pop)
@@ -92,6 +100,8 @@ create table shootings (
 
 
 =======
+=======
+>>>>>>> refs/remotes/origin/main
 	lunch integer
 );
 
@@ -127,7 +137,10 @@ create table county_pop (
 	poverty_count decimal (8,1)not null,
 	poverty_rate decimal (4,2) not null
 );
+<<<<<<< HEAD
 >>>>>>> origin/Jodee
+=======
+>>>>>>> refs/remotes/origin/main
 
 --View the tables
 select * from shootings;
