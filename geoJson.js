@@ -3,6 +3,11 @@ function createMap(gunViolence) {
     let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
+//linking to the geojson url to a value to be accessed
+url1 = "/api/v1.0/shooting"
+url2 = "/api/v1.0/state population"
+url3 = "/api/v1.0/county population"
+
 // Create a baseMaps object to hold the streetmap layer.
     let baseMaps = {
     "Street Map": streetmap
@@ -23,7 +28,7 @@ function createMap(gunViolence) {
     collapsed: false
   }).addTo(map);
 }
-
+//Create markers
 function createMarkers(response) {
 
     // Pull the "stations" property from response.data.
@@ -100,7 +105,7 @@ function createMarkers(response) {
 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "Average Rental Income"
+            text: "School Shooting Increase"
         },
         axisX: {
             valueFormatString: "MMM YYYY"
@@ -136,5 +141,6 @@ function createMarkers(response) {
     
     
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json").then(createMarkers);
-
+d3.json(url1).then(createMarkers);
+d3.json(url2).then(createMarkers);
+d3.json(url3).then(createMarkers);
