@@ -8,12 +8,12 @@ Jamie Hutton<br/>
 David Rojas<br/>
 
 ## Project Motivation
-Our motivation for this project was to inform the general public of the This project allows a user to analyze the data of school shootings in the United States from 1999 to 2023.
+Our motivation for this project was to inform the general public of the rise of school shootings since Columbine in 1999.  There have been 389 school shootings since this fatal incident. This project allows a user to analyze the data of school shootings in the United States from 1999 to 2023. They will be able to interact by choosing states to see the school shootings in that state. A map to see the locations of school shootings with a maker-size to show the number of casualties.  
 
 ## Technology
 Jupyter Notebook: Used to make an API call to the census to retrieve state and county demographics.<br/>
-SQL: Used to create tables to make an ERD<br/>
-SQLite: Used by pulling the shooting, state, and county CSV to create the Flask API.<br/>
+SQL: Used to create tables by adding columns and importing the CSV. Then used to make an ERD<br/>
+SQLite: Used by pulling the shooting, state, and county CSV in the database then using the saved file to create the Flask API.<br/>
 JavaScript: Used to create the map and other interactive tools.<br/>
 HTML and CSS: Used to
 
