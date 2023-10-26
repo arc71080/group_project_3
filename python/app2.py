@@ -7,7 +7,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 #################################################
 # Database Setup
@@ -35,6 +35,8 @@ app = Flask(__name__)
 #################################################
 
 @app.route("/")
+def index():
+    return render_template('schoolshootingdashboard.html')
 def welcome():
     """List all available api routes."""
     return (
@@ -42,7 +44,7 @@ def welcome():
         f"/api/v1.0/county population"
     )
 
-@app.route("/api/v1.0/county population")
+@app.route("/api/v1.0/county population", methods=['GET'])
 def names():
     # Create our session (link) from Python to the DB
     session = Session(engine)

@@ -97,10 +97,12 @@ function createMarkers(response) {
     
      */
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
+fetch('https://cors-demo.glitch.me/allow-cors', {mode:'cors'});
+d3.json('http://127.0.0.1:5000/api/v1.0/shooting').then(createMarkers);
 axios.get('http://127.0.0.1:5000/api/v1.0/shooting')
-    .then(response => {
-        console.log(response.data)
-    })
+            .then(response => {
+                console.log(response.data)})
+
 /* d3.json(url2).then(createMarkers);
 d3.json(url3).then(createMarkers);
  */

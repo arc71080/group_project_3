@@ -5,8 +5,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 #################################################
 # Database Setup
@@ -46,7 +45,7 @@ def welcome():
     )
 
 
-@app.route("/api/v1.0/shooting")
+@app.route("/api/v1.0/shooting", methods=['GET'])
 def names():
     # Create our session (link) from Python to the DB
     session = Session(engine)
