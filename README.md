@@ -1,4 +1,5 @@
 # Gun Violence in America
+<img width="1011" alt="Screenshot 2023-10-25 at 7 52 58 PM" src="https://github.com/arc71080/group_project_3/assets/137009177/c10d38ff-4848-4028-ad57-f570dd4a85c7">
 
 ## Contributors
 Amanda Cantu
