@@ -97,7 +97,7 @@ function createMarkers(response) {
     
      */
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-axios.get('/api/v1.0/shooting')
+axios.get('http://127.0.0.1:5000/api/v1.0/shooting')
     .then(response => {
         console.log(response.data)
     })
