@@ -4,9 +4,9 @@ function createMap(gunViolence) {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 //linking to the geojson url to a value to be accessed
-url1 = "/api/v1.0/shooting"
-url2 = "/api/v1.0/state population"
-url3 = "/api/v1.0/county population"
+    url1 = 
+    url2 = "http://127.0.0.1:5000/api/v1.0/state population"
+    url3 = "http://127.0.0.1:5000/api/v1.0/county population"
 
 // Create a baseMaps object to hold the streetmap layer.
     let baseMaps = {
@@ -15,13 +15,15 @@ url3 = "/api/v1.0/county population"
 
 // Create an overlayMaps object to hold the bikeStations layer.
     let overlayMaps = {
-    "Bike Stations": bikeStations
+    "state_id": state
       };
+
+
   // Create the map object with options.
   let map = L.map("map-id", {
     center: [40.73, -74.0059],
     zoom: 12,
-    layers: [streetmap, bikeStations]
+    layers: [streetmap, state]
   });
   // Create a layer control, and pass it baseMaps and overlayMaps. Add the layer control to the map.
   L.control.layers(baseMaps, overlayMaps, {
@@ -30,20 +32,22 @@ url3 = "/api/v1.0/county population"
 }
 //Create markers
 function createMarkers(response) {
-
+    
+    //allowing the data to be viewed in the console
+    console.log(response)
     // Pull the "stations" property from response.data.
-    let stations = response.data.stations;
+    let casuals = response.casualties;
   
     // Initialize an array to hold the bike markers.
     let violenceMarkers = [];
   
     // Loop through the stations array.
-    for (let index = 0; index < stations.length; index++) {
-      let station = stations[index];
+    for (let index = 0; index < casuals.length; index++) {
+      let casual = casuals[index];
   
       // For each station, create a marker, and bind a popup with the station's name.
-      let violenceMarker = L.marker([station.lat, station.lon])
-        .bindPopup("<h3>" + station.name + "<h3><h3>Capacity: " + station.capacity + "</h3>");
+      let violenceMarker = L.marker([casual.lat, casual.long])
+        .bindPopup("<h3>" + casual.city + "<h3><h3>Ethnicity: " + casual.race_ethnicity_shooter1 + "</h3>");
   
       // Add the marker to the bikeMarkers array.
       violenceMarkers.push(violenceMarker);
@@ -54,55 +58,7 @@ function createMarkers(response) {
   }
 
   
-// a format for encoding a variety of geographic data structures 
-    L.geoJson(eqData,{
-    //setting the location of the data on the map
-    pointToLayer:function(feature, cord){
-        //Formatting the design of the data
-        return L.circleMarker(cord,{
-            color: depth(feature.geometry.coordinates[2]),
-            fillColor: depth(feature.geometry.coordinates[2]),
-            opacity: 1,
-            fillOpacity: .3, 
-            radius: feature.properties.mag * 10
-            })
-        },
-        //Allowing a popup display on each displayed feature on the map
-        onEachFeature: function(feature, layer){
-            layer.bindPopup(`<h1>LOCATION: ${feature.properties.place.toUpperCase()},
-            LATITUDE: ${feature.geometry.coordinates[1]},
-            LONGITUDE: ${feature.geometry.coordinates[0]},
-            MAGNITUDE: ${feature.properties.mag}</h1>`);
-        }}).addTo(map);
-        //Placing a legend
-    control = L.control({position:"bottomright"})
-    control.onAdd = function(){
-        let box = L.DomUtil.create("div","legends")
-        let depths = [90,70,50,30,0]
-
-        //For loop to display labels with colors of the depth
-        box.innerHTML = "<h3>Depth Measure</h3>"
-        for (let d=0; d < depths.length; d++) {
-            let display;
-
-            if (d == 0){
-                display = "90+"
-            } else if (d == depths.length -1) {
-                display = "<=30"
-            }else {
-                display = `${depths[d-1]}-${depths[d]}`
-            }
-            //connecting with the css file to set up coloration
-            box.innerHTML +=`<div>
-            <div class="description" style="background-color:${depth(depths[d])}"></div> ${display}
-            </div>`
-        }
-        
-        //calling the value to be displayed
-        return box
-    }//adding to the map so appear on the html  
-    control.addTo(map);
-
+/* 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
             text: "School Shooting Increase"
@@ -139,8 +95,12 @@ function createMarkers(response) {
     
     chart.render();
     
-    
+     */
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-d3.json(url1).then(createMarkers);
-d3.json(url2).then(createMarkers);
+axios.get('/api/v1.0/shooting')
+    .then(response => {
+        console.log(response.data)
+    })
+/* d3.json(url2).then(createMarkers);
 d3.json(url3).then(createMarkers);
+ */
