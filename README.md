@@ -18,6 +18,7 @@ SQL: Used to create tables by adding columns and importing the CSV. Then used to
 SQLite: Used by pulling the shooting, state, and county CSV in the database then using the saved file to create the Flask API.<br/>
 JavaScript: Used to create the map and other interactive tools.<br/>
 HTML and CSS: Used to render the interactive tool.
+<img width="1396" alt="Screenshot 2023-10-25 at 8 35 28 PM" src="https://github.com/arc71080/group_project_3/assets/137009177/306fd93e-b0dc-4405-b2ae-cd6b6def021b">
 
 ## Sources 
 
