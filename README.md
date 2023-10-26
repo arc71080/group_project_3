@@ -15,7 +15,7 @@ Jupyter Notebook: Used to make an API call to the census to retrieve state and c
 SQL: Used to create tables by adding columns and importing the CSV. Then used to make an ERD<br/>
 SQLite: Used by pulling the shooting, state, and county CSV in the database then using the saved file to create the Flask API.<br/>
 JavaScript: Used to create the map and other interactive tools.<br/>
-HTML and CSS: Used to
+HTML and CSS: Used to render the interactive tool.
 
 ## Sources 
 
